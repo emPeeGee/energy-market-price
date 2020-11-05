@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { IntroComponent } from './views/intro/intro.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SolutionComponent } from './views/solution/solution.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IntroComponent
+    IntroComponent,
+    SolutionComponent
   ],
   imports: [
     BrowserModule,
