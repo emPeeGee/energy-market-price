@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-intro',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./intro.component.scss']
 })
 export class IntroComponent implements OnInit {
+  faAngleRight = faAngleRight;
 
   constructor() { }
 
