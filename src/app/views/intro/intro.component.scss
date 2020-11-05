@@ -1,0 +1,45 @@
+.intro {
+  width: 100%;
+  height: 92vh;
+  color: white;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__video-background {
+    background: #000;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -99;
+  }
+
+  &__video-foreground,
+  &__video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  &__content {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  &__content-button {
+    width: 200px;
+    height: 60px;
+    background: none;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
