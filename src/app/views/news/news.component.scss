@@ -160,7 +160,6 @@
 
 @media screen and (max-width: $tablet) {
   .news {
-
     &__content {
       display: block;
     }
@@ -211,6 +210,10 @@
           margin: 0 auto;
         }
       }
+    }
+
+    &__item-image {
+      height: 160px;
     }
   }
 }
