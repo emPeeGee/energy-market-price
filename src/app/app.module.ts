@@ -8,13 +8,15 @@ import { IntroComponent } from './views/intro/intro.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SolutionComponent } from './views/solution/solution.component';
 import { AboutComponent } from './views/about/about.component';
+import { PartnersComponent } from './views/partners/partners.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IntroComponent,
     SolutionComponent,
-    AboutComponent
+    AboutComponent,
+    PartnersComponent
   ],
   imports: [
     BrowserModule,

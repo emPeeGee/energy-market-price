@@ -1,0 +1,154 @@
+@import "src/assets/styles/colors";
+
+.carousel {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: space-between;
+
+
+  &__title-subtitle,
+  &__title-title
+  {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  &__title,
+  {
+    font-size: 20px;
+    margin: 0;
+  }
+
+
+  &__title-subtitle
+  {
+    font-size: 16px;
+    margin: 32px 0;
+  }
+
+  &__controls {
+    width: 25%;
+  }
+
+  &__controls-center {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__control {
+    font-size: 36px;
+    color: $grey_color;
+    cursor: pointer;
+  }
+
+  &__counter {
+    font-size: 40px;
+    color: $grey_color;
+    margin: 0 32px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+  }
+
+  &__content {
+    width: 75%;
+  }
+
+
+  &__slides {
+    width: 100%;
+    display: flex;
+  }
+
+  &__slide-wrapper {
+    width: 33.3%;
+  }
+
+  &__slide {
+    width: 90%;
+    margin: 0 auto;
+    color: $dark_gray_color;
+
+
+    &-image {
+      width: 100%;
+      height: 140px;
+      filter: grayscale(80%);
+    }
+
+    &-logo {
+      width: 43%;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    &-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    &-info {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px){
+  .carousel {
+    display: block;
+
+    &__controls {
+      width: 100%;
+      text-align: center;
+    }
+
+    &__content {
+      width: 100%;
+    }
+
+    &__controls-center {
+      justify-content: center;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 650px){
+  .carousel {
+    display: block;
+
+    &__controls {
+      width: 100%;
+      text-align: center;
+    }
+
+    &__content {
+      width: 100%;
+    }
+
+    &__controls-center {
+      justify-content: center;
+    }
+
+    &__slides {
+      display: block;
+    }
+
+    &__slide-wrapper {
+      width: 100%;
+    }
+
+    &__slide-image {
+      width: 100%;
+      height: 240px;
+    }
+  }
+}
+
+
+

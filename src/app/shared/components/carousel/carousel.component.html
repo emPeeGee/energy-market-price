@@ -1,0 +1,42 @@
+<div class="carousel">
+
+  <div class="carousel__controls">
+    <h1 class="carousel__title">Proudly <br /> working with :</h1>
+    <p class="carousel__title-subtitle">Some of-work <br /> to date</p>
+
+    <div class="carousel__controls-center">
+      <fa-icon
+        class="carousel__control"
+        [icon]="faAngleLeft"
+        (click)="onPreviousClick()"></fa-icon>
+      <div class="carousel__counter">{{ currentSlide }}</div>
+      <fa-icon
+        class="carousel__control"
+        [icon]="faAngleRight"
+        (click)="onNextClick()"></fa-icon>
+    </div>
+  </div>
+
+  <div class="carousel__content">
+    <ng-container *ngFor="let slide of slides; let i = index">
+      <div class="carousel__slides" *ngIf="i === currentSlide" @carouselAnimation >
+        <div class="carousel__slide-wrapper" *ngFor="let ind of currentLength">
+          <div class="carousel__slide">
+            <img
+              alt="aaa"
+              class="carousel__slide-logo"
+              [src]="slide.logos[ind]" >
+            <img
+              class="carousel__slide-image"
+              alt=""
+              [src]="slide.images[ind]" />
+            <h4 class="carousel__slide-title">Gazprom Nord Stream 22</h4>
+            <p class="carousel__slide-info">A new export gas pipeline running from Russia to Europe across the Baltic Sea</p>
+          </div>
+        </div>
+
+      </div>
+    </ng-container>
+  </div>
+
+</div>
