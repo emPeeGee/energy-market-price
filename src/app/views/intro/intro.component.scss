@@ -1,4 +1,5 @@
 @import "src/assets/styles/colors";
+@import "src/assets/styles/dimensions";
 
 .intro {
   width: 100%;
@@ -51,7 +52,7 @@
   height: auto;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: $laptop){
   .intro {
     height: 800px;
 
@@ -67,7 +68,7 @@
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: $tablet){
   .intro {
     height: 800px;
 
