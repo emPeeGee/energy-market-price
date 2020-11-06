@@ -10,6 +10,7 @@ import { SolutionComponent } from './views/solution/solution.component';
 import { AboutComponent } from './views/about/about.component';
 import { PartnersComponent } from './views/partners/partners.component';
 import { EnergyDataComponent } from './views/energy-data/energy-data.component';
+import { NewsComponent } from './views/news/news.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EnergyDataComponent } from './views/energy-data/energy-data.component';
     SolutionComponent,
     AboutComponent,
     PartnersComponent,
-    EnergyDataComponent
+    EnergyDataComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

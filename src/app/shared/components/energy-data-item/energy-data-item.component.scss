@@ -39,7 +39,11 @@ fa-icon {
 @media screen and (max-width: $laptop){
 
   .box {
-    &-header {
+
+    padding: 0;
+
+
+    &__header {
       justify-content: center;
     }
   }
