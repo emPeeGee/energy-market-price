@@ -7,15 +7,17 @@ import { TabManagerComponent } from './components/tabs/tab-manager/tab-manager.c
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EnergyDataItemComponent } from './components/energy-data-item/energy-data-item.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [HeaderComponent, TabComponent, TabManagerComponent, CarouselComponent, EnergyDataItemComponent],
+  declarations: [HeaderComponent, TabComponent, TabManagerComponent, CarouselComponent, EnergyDataItemComponent, FooterComponent],
   exports: [
     HeaderComponent,
     TabManagerComponent,
     TabComponent,
     CarouselComponent,
     EnergyDataItemComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,
