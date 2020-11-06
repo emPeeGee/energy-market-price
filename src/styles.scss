@@ -29,9 +29,41 @@ body {
   color: $green_color;
 }
 
-@media screen and (max-width: 1024px){
+.item-title {
+  width: 90%;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.item-date {
+  font-size: 12px;
+}
+
+.item-info {
+  font-size: 12.5px;
+  line-height: 18px;
+}
+
+.item-more {
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media screen and (max-width: $laptop) {
   .container {
     max-width: 768px;
     height: inherit;
   }
+
+  .item-title {
+    width: 100%;
+    line-height: 16px;
+  }
+
+  .item-info {
+    font-size: 12.5px;
+    line-height: 17.59px;
+  }
 }
+

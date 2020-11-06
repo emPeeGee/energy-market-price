@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,11 +9,8 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
   animations: [
     trigger('carouselAnimation', [
       transition('void => *', [
-        style({ opacity: 0 }),
-        animate('250ms', style({ opacity: 1 }))
-      ]),
-      transition('* => void', [
-        animate('250ms', style({ opacity: 0 }))
+        style({ opacity: 0.3 }),
+        animate('1000ms ease', style({ opacity: 1 }))
       ])
     ])
   ]

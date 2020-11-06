@@ -1,0 +1,13 @@
+<div class="controller__controls">
+  <div class="controller__controls-center">
+    <fa-icon
+      class="controller__control"
+      [icon]="faAngleLeft"
+      (click)="previousClick.emit()"></fa-icon>
+    <div class="controller__counter">{{ currentItem }}</div>
+    <fa-icon
+      class="controller__control"
+      [icon]="faAngleRight"
+      (click)="nextClick.emit()"></fa-icon>
+  </div>
+</div>

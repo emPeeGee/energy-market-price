@@ -4,17 +4,11 @@
     <h1 class="carousel__title">Proudly <br /> working with :</h1>
     <p class="carousel__title-subtitle">Some of-work <br /> to date</p>
 
-    <div class="carousel__controls-center">
-      <fa-icon
-        class="carousel__control"
-        [icon]="faAngleLeft"
-        (click)="onPreviousClick()"></fa-icon>
-      <div class="carousel__counter">{{ currentSlide }}</div>
-      <fa-icon
-        class="carousel__control"
-        [icon]="faAngleRight"
-        (click)="onNextClick()"></fa-icon>
-    </div>
+    <app-controller
+      class="carousel__controller"
+      [currentItem]="currentSlide"
+      (nextClick)="onNextClick()"
+      (previousClick)="onPreviousClick()"></app-controller>
   </div>
 
   <div class="carousel__content">

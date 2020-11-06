@@ -1,0 +1,24 @@
+@import "src/assets/styles/colors";
+
+.controller {
+  &__controls-center {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__control {
+    font-size: 36px;
+    color: $grey_color;
+    cursor: pointer;
+  }
+
+  &__counter {
+    width: 30px;
+    text-align: center;
+    font-size: 40px;
+    color: $grey_color;
+    margin: 0 32px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+  }
+}

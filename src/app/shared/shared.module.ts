@@ -10,6 +10,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { EnergyDataItemComponent } from './components/energy-data-item/energy-data-item.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HighlightDirective } from './directives/highlight/highlight.directive';
+import { SliderComponent } from './components/slider/slider.component';
+import { ControllerComponent } from './components/controller/controller.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,10 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
     CarouselComponent,
     EnergyDataItemComponent,
     FooterComponent,
-    HighlightDirective
+    HighlightDirective,
+    SliderComponent,
+    SliderComponent,
+    ControllerComponent
   ],
   exports: [
     HeaderComponent,
@@ -28,6 +33,7 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
     CarouselComponent,
     EnergyDataItemComponent,
     FooterComponent,
+    SliderComponent,
   ],
   imports: [
     CommonModule,

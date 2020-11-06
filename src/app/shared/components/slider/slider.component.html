@@ -1,0 +1,28 @@
+<div class="slider">
+
+   <ng-container *ngFor="let slide of slides; let i = index">
+      <div *ngIf="i === currentSlide" @sliderAnimation >
+
+        <div class="slider__slide">
+          <img class="slider__slide-image" [src]="slide.image" alt="">
+          <div class="slider__slide-content">
+            <p class="slider__slide-date item-date">{{ slide.date | date: 'short' }}</p>
+            <h4 class="slider__slide-title item-title">{{ slide.title }}</h4>
+            <p class="slider__slide-info item-info"> {{ slide.description }}</p>
+            <p class="slider__slide-more item-more">
+              <fa-icon [icon]="faAngleRight"></fa-icon>
+              Read more
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </ng-container>
+
+  <app-controller
+    class="slider__controller"
+    [currentItem]="currentSlide"
+    (nextClick)="onNextClick()"
+    (previousClick)="onPreviousClick()" ></app-controller>
+
+</div>

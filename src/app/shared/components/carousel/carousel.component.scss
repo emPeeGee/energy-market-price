@@ -33,29 +33,9 @@
     width: 25%;
   }
 
-  &__controls-center {
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  &__control {
-    font-size: 36px;
-    color: $grey_color;
-    cursor: pointer;
-  }
-
-  &__counter {
-    font-size: 40px;
-    color: $grey_color;
-    margin: 0 32px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-  }
-
   &__content {
     width: 75%;
   }
-
 
   &__slides {
     width: 100%;
@@ -107,17 +87,16 @@
       text-align: center;
     }
 
+    &__controller {
+      display: flex;
+      justify-content: center;
+    }
+
     &__content {
       width: 100%;
     }
-
-    &__controls-center {
-      justify-content: center;
-    }
   }
 }
-
-
 
 @media screen and (max-width: $tablet_small){
   .carousel {
@@ -130,10 +109,6 @@
 
     &__content {
       width: 100%;
-    }
-
-    &__controls-center {
-      justify-content: center;
     }
 
     &__slides {
