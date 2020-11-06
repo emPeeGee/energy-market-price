@@ -21,37 +21,16 @@
     border-top: 1px solid $grey_color;
     border-bottom: 1px solid $grey_color;
   }
-
-  &__box {
-    border-right: 1px solid $grey_color;
-    padding-right: 20px;
-
-    &-header {
-      display: flex;
-      align-items: flex-end;
-    }
-
-    &-title {
-      margin: 0 0 0 16px;
-      vertical-align: bottom;
-      height: fit-content;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    &-info {
-      font-size: 13px;
-    }
-
-    &:last-child {
-      border: none;
-    }
-  }
 }
 
-fa-icon {
-  font-size: 30px;
-  color: $blue-color;
+app-energy-data-item {
+  border-right: 1px solid $grey_color;
 }
+
+app-energy-data-item:last-child {
+  border: none;
+}
+
 
 @media screen and (max-width: $laptop){
 
@@ -61,16 +40,13 @@ fa-icon {
       flex-wrap: wrap;
       justify-content: center;
     }
-
-    &__box {
-      flex: 0 0 50%;
-      border-right: none;
-      padding-right: 0;
-      text-align: center;
-
-      &-header {
-        justify-content: center;
-      }
-    }
   }
+
+  app-energy-data-item {
+    border: none;
+    flex: 0 0 50%;
+    padding-right: 0;
+    text-align: center;
+  }
+
 }

@@ -1,0 +1,46 @@
+@import "src/assets/styles/colors";
+@import "src/assets/styles/dimensions";
+
+.box {
+  border-right: 1px solid $grey_color;
+  padding-right: 20px;
+
+  &__header {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__title {
+    margin: 0 0 0 16px;
+    vertical-align: bottom;
+    height: fit-content;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  &__price {
+    font-size: 13px;
+  }
+
+  &__info {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  &:last-child {
+    border: none;
+  }
+}
+
+fa-icon {
+  font-size: 30px;
+  color: $blue-color;
+}
+
+@media screen and (max-width: $laptop){
+
+  .box {
+    &-header {
+      justify-content: center;
+    }
+  }
+}

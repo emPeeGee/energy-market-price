@@ -1,0 +1,14 @@
+<div class="box">
+  <div class="box__header">
+    <fa-icon [icon]="data.icon"></fa-icon>
+    <h4 class="box__title">{{ data.title }}</h4>
+  </div>
+  <p class="box__price">
+    <span
+      class="green-bold"
+      [class.red-bold]="data.percentage < 0"
+      [class.green-bold]="data.percentage > 0">{{ getPercentage(data.percentage) }}</span> {{ data.price }}
+  </p>
+  <p class="box__info">{{ data.info }}</p>
+</div>
+
