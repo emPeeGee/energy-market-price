@@ -1,16 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './components/header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { HeaderComponent } from './components/header/header.component';
 import { TabComponent } from './components/tabs/tab/tab.component';
 import { TabManagerComponent } from './components/tabs/tab-manager/tab-manager.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EnergyDataItemComponent } from './components/energy-data-item/energy-data-item.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HighlightDirective } from './directives/highlight/highlight.directive';
 
 @NgModule({
-  declarations: [HeaderComponent, TabComponent, TabManagerComponent, CarouselComponent, EnergyDataItemComponent, FooterComponent],
+  declarations: [
+    HeaderComponent,
+    TabComponent,
+    TabManagerComponent,
+    CarouselComponent,
+    EnergyDataItemComponent,
+    FooterComponent,
+    HighlightDirective
+  ],
   exports: [
     HeaderComponent,
     TabManagerComponent,

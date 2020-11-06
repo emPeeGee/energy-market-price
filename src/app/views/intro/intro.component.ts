@@ -9,6 +9,8 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 export class IntroComponent implements OnInit {
   faAngleRight = faAngleRight;
 
+  menuItems = ['HOME', 'SOLUTIONS', 'TUTORIAL', 'ABOUT US', 'LIBRARY', 'NEWS', 'CONTACT US'];
+
   constructor() { }
 
   ngOnInit(): void {

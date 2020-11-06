@@ -54,16 +54,27 @@
   &__item {
     font-weight: bold;
     cursor: pointer;
+
+    &:hover {
+      color: $green_color;
+      transition: ease-in 200ms;
+    }
   }
 
   &__login {
     width: 20%;
     text-align: right;
+    cursor: pointer;
   }
 }
 
 fa-icon {
   margin-right: 5px;
+}
+
+.active {
+  color: $green_color;
+  border-bottom: 3px solid $green_color;
 }
 
 
