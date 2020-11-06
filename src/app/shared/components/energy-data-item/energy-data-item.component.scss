@@ -3,16 +3,18 @@
 
 .box {
   border-right: 1px solid $grey_color;
-  padding-right: 20px;
+  padding: 0 20px;
+  text-align: center;
 
   &__header {
     display: flex;
     align-items: flex-end;
+    justify-content: center;
+    text-align: left;
   }
 
   &__title {
     margin: 0 0 0 16px;
-    vertical-align: bottom;
     height: fit-content;
     font-family: 'Montserrat', sans-serif;
   }
@@ -24,6 +26,10 @@
   &__info {
     font-size: 12px;
     font-weight: bold;
+  }
+
+  &:first-child {
+    border: none;
   }
 
   &:last-child {
@@ -39,12 +45,6 @@ fa-icon {
 @media screen and (max-width: $laptop){
 
   .box {
-
     padding: 0;
-
-
-    &__header {
-      justify-content: center;
-    }
   }
 }
