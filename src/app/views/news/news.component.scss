@@ -33,7 +33,7 @@
     width: 100%;
     height: 250px;
     margin-bottom: 16px;
-    box-shadow: 5px 5px 20px $grey_color;
+    box-shadow: 5px 5px 20px $gray_color;
     display: flex;
 
     &-image {
@@ -47,8 +47,8 @@
 
     &-content {
       width: 40%;
-      background-color: $blue-color;
-      color: $white-color;
+      background-color: $blue_color;
+      color: $white_color;
 
       &-wrapper {
         width: 84%;
@@ -68,16 +68,16 @@
     &-image {
       width: 100%;
       height: 243px;
-      box-shadow: 5px 5px 20px $grey_color;
+      box-shadow: 5px 5px 20px $gray_color;
       object-fit: cover;
     }
 
     &-date {
-      color: $grey_color;
+      color: $gray_color;
     }
 
     &-title {
-      color: $blue-color
+      color: $blue_color
     }
 
     &:first-child {

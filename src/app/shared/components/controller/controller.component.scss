@@ -8,18 +8,18 @@
 
   &__control {
     font-size: 36px;
-    color: $grey_color;
+    color: $gray_color;
     cursor: pointer;
   }
 
   &__counter {
     width: 30px;
     text-align: center;
-    font-size: 40px;
-    color: $grey_color;
+    font-size: 35px;
+    color: $gray_color;
     margin: 0 20px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
+    font-weight: 700;
   }
 
   &__tabs {
@@ -33,7 +33,7 @@
     width: 30px;
     height: 2.5px;
     margin-right: 5px;
-    background-color: $grey_color;
+    background-color: $gray_color;
     cursor: pointer;
   }
 

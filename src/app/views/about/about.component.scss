@@ -7,12 +7,12 @@
   height: 700px;
   background-size: cover;
   position: relative;
-  color: $white-color;
+  color: $white_color;
 
   &__background {
     width: 100%;
     height: 700px;
-    background-color: $about_us_background_color;
+    background-color: $dark_blue_background_color;
   }
 
   &__wrapper {
@@ -39,7 +39,7 @@
 
 fa-icon {
   font-size: 60px;
-  color: $white-color;
+  color: $white_color;
   margin-right: 10px;
   cursor: pointer;
 }

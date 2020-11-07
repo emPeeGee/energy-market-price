@@ -9,7 +9,7 @@
 
   &__slide {
     width: 100%;
-    box-shadow: 5px 5px 20px $grey_color;
+    box-shadow: 5px 5px 20px $gray_color;
 
     &-content {
       width: 90%;
@@ -23,11 +23,11 @@
     }
 
     &-date {
-      color: $grey_color;
+      color: $gray_color;
     }
 
     &-title {
-      color: $blue-color;
+      color: $blue_color;
     }
 
     &-info {
@@ -36,7 +36,7 @@
 
     &-more {
       margin-top: 60px;
-      color: $blue-color;
+      color: $blue_color;
     }
   }
 
@@ -91,7 +91,6 @@
     }
   }
 }
-
 
 @media screen and (max-width: $tablet) {
   .slider {

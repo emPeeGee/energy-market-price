@@ -18,13 +18,13 @@
     display: flex;
     justify-content: space-between;
     padding: 40px 0;
-    border-top: 1px solid $grey_color;
-    border-bottom: 1px solid $grey_color;
+    border-top: 1px solid $gray_color;
+    border-bottom: 1px solid $gray_color;
   }
 }
 
 app-energy-data-item {
-  border-right: 1px solid $grey_color;
+  border-right: 1px solid $gray_color;
 }
 
 app-energy-data-item:last-child {

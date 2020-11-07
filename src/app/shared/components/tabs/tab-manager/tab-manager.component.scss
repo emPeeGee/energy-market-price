@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
 
-  border-bottom: 1px solid $grey_color;
+  border-bottom: 1px solid $gray_color;
 
   &__button {
     width: 220px;
@@ -13,15 +13,15 @@
     font-weight: bold;
     font-size: 14px;
     border: none;
-    color: $blue-color;
-    background: $white-color;
+    color: $blue_color;
+    background: $white_color;
     outline: none;
     cursor: pointer;
   }
 
   &__button-active {
-    background: $blue-color;
-    color: $white-color;
+    background: $blue_color;
+    color: $white_color;
     border-bottom: none;
   }
 }
