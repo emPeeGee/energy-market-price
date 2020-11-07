@@ -8,11 +8,16 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style type="text/css">
     body, html {
-      height: 100%;
       padding: 0;
       margin: 0;
     }
-    .app-loading {
+
+    .app__loading {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .app-loading__wrapper {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -71,13 +76,15 @@
 </head>
 <body>
   <app-root>
-    <div class="app-loading">
-      <div class="app-loading__logo">
-        <img src="assets/images/logos/emp-logo.png" alt="">
+    <div class="app__loading">
+      <div class="app-loading__wrapper">
+        <div class="app-loading__logo">
+          <img src="assets/images/logos/emp-logo.png" alt="">
+        </div>
+        <svg class="app-loading__spinner" viewBox="25 25 50 50">
+          <circle class="app-loading__path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+        </svg>
       </div>
-      <svg class="app-loading__spinner" viewBox="25 25 50 50">
-        <circle class="app-loading__path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-      </svg>
     </div>
   </app-root>
 </body>
