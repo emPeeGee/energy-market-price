@@ -12,12 +12,4 @@ export class EnergyDataItemComponent {
 
   constructor() { }
 
-  getPercentage(percentage: number): string {
-    if (percentage > 0) {
-      return `+${percentage}%`;
-    }
-
-    return `-${percentage}%`;
-  }
-
 }

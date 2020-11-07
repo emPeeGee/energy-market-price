@@ -9,8 +9,9 @@
   background-color: $light_gray_color;
 
   &__title {
-    text-align: center;
+    margin-top: 0;
     margin-bottom: 50px;
+    text-align: center;
     font-weight: 400;
   }
 

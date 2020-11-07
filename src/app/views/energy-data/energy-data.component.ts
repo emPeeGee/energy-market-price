@@ -18,7 +18,7 @@ export class EnergyDataComponent implements OnInit {
       { title: 'Natural Gas', icon: faFire, percentage: 3.43, price: '68.51 Eur/MWh', info: 'NBP Y+1' },
       { title: 'Power', icon: faBolt, percentage: -5.77, price: '41.25 EUR/MWh', info: 'Belgium Power Y+1' },
       { title: 'Coal', icon: faIndustry, percentage: 1.49, price: '68.51 USM/tonne', info: 'Coal ARA CIF Q+1' },
-      { title: 'Economics', icon: faCoins, percentage: 1.85, price: '47.10 million bbl', info: 'EIA Crude Stock' },
+      { title: 'Economics', icon: faCoins, percentage: -1.85, price: '47.10 million bbl', info: 'EIA Crude Stock' },
       { title: 'Green', icon: faLeaf, percentage: 1.43, price: '4.95 EUR/tonne', info: 'CO2 EUA Dec20' },
     ];
   }

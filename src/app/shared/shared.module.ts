@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { SliderComponent } from './components/slider/slider.component';
 import { ControllerComponent } from './components/controller/controller.component';
+import { PercentagePipe } from './pipes/percentage.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ControllerComponent } from './components/controller/controller.componen
     HighlightDirective,
     SliderComponent,
     SliderComponent,
-    ControllerComponent
+    ControllerComponent,
+    PercentagePipe
   ],
   exports: [
     HeaderComponent,
