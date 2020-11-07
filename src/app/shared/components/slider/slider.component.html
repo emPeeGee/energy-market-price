@@ -1,9 +1,9 @@
 <div class="slider">
 
    <ng-container *ngFor="let slide of slides; let i = index">
-      <div *ngIf="i === currentSlide" @sliderAnimation >
+      <div *ngIf="i === currentSlide" @sliderAnimation>
 
-        <div class="slider__slide">
+        <div class="slider__slide" (swiperight)="onNextClick()">
           <img class="slider__slide-image" [src]="slide.image" alt="">
           <div class="slider__slide-content">
             <p class="slider__slide-date item-date">{{ slide.date | date: 'short' }}</p>
@@ -22,7 +22,9 @@
   <app-controller
     class="slider__controller"
     [currentItem]="currentSlide"
+    [totalItems]="slides.length"
     (nextClick)="onNextClick()"
-    (previousClick)="onPreviousClick()" ></app-controller>
+    (previousClick)="onPreviousClick()"
+    (tabClick)="onTabClick($event)"></app-controller>
 
 </div>

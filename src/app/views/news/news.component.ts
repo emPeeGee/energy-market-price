@@ -23,6 +23,12 @@ export class NewsComponent implements OnInit {
       title: 'Daily (24.05.2020): EUAs surpassed the $ 25-level for the first time in four months on Tuesday amid bullish economic data',
       description: 'Crude oil futures pulled back off the highest level since before coronavirus pandemic on Tuesday amid a sharp increase in COVID-19 cases and before the release of a weekly report which is expected to reveal that crude inventories have reached a new all-time high in the United States.'
     },
+    {
+      image: 'https://paranoidandroid.co/assets/wallpapers/2018/submerged_desktop_thumb.jpg',
+      date: new Date(2020, 5, 17),
+      title: 'Daily (24.05.2020): EUAs surpassed the $ 25-level for the first time in four months on Tuesday amid bullish economic data',
+      description: 'Crude oil futures pulled back off the highest level since before coronavirus pandemic on Tuesday amid a sharp increase in COVID-19 cases and before the release of a weekly report which is expected to reveal that crude inventories have reached a new all-time high in the United States.'
+    },
 
   ];
 

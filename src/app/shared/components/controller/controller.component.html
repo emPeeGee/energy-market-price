@@ -10,4 +10,14 @@
       [icon]="faAngleRight"
       (click)="nextClick.emit()"></fa-icon>
   </div>
+
+  <div class="controller__tabs">
+    <div *ngFor="let index of items;">
+      <div class="controller__tab"
+           [class.controller__tab--active]="index === currentItem"
+           (click)="tabClick.emit(index)">
+
+      </div>
+    </div>
+  </div>
 </div>

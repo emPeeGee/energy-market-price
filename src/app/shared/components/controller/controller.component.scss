@@ -17,8 +17,28 @@
     text-align: center;
     font-size: 40px;
     color: $grey_color;
-    margin: 0 32px;
+    margin: 0 20px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 16px;
+  }
+
+  &__tab {
+    width: 30px;
+    height: 2.5px;
+    margin-right: 5px;
+    background-color: $grey_color;
+    cursor: pointer;
+  }
+
+  &__tab--active {
+    height: 4.5px;
+    background-color: $green_color;
   }
 }

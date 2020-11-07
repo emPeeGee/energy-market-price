@@ -23,13 +23,26 @@ export class PartnersComponent implements OnInit {
     },
     {
       logos: [
-        'assets/images/gazprom.png',
         'assets/images/toyota.png',
+        'assets/images/gazprom.png',
         'assets/images/vodafone.png',
       ],
       images: [
-        'assets/images/background_gas_pipeline.jpg',
         'assets/images/background_wind_turbines.jpg',
+        'assets/images/background_pipelines.jpg',
+        'assets/images/background_gas_pipeline.jpg',
+      ],
+      elems: 3,
+    },
+    {
+      logos: [
+        'assets/images/vodafone.png',
+        'assets/images/toyota.png',
+        'assets/images/gazprom.png',
+      ],
+      images: [
+        'assets/images/background_wind_turbines.jpg',
+        'assets/images/background_gas_pipeline.jpg',
         'assets/images/background_pipelines.jpg',
       ],
       elems: 3,

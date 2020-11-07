@@ -9,7 +9,7 @@ import { TabManagerComponent } from './components/tabs/tab-manager/tab-manager.c
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { EnergyDataItemComponent } from './components/energy-data-item/energy-data-item.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HighlightDirective } from './directives/highlight/highlight.directive';
+import { HighlightDirective } from './directives/highlight.directive';
 import { SliderComponent } from './components/slider/slider.component';
 import { ControllerComponent } from './components/controller/controller.component';
 
@@ -34,6 +34,7 @@ import { ControllerComponent } from './components/controller/controller.componen
     EnergyDataItemComponent,
     FooterComponent,
     SliderComponent,
+    HighlightDirective,
   ],
   imports: [
     CommonModule,

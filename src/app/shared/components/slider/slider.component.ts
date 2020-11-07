@@ -34,4 +34,8 @@ export class SliderComponent {
     this.currentSlide = next === this.slides.length ? 0 : next;
   }
 
+  onTabClick(index: number): void {
+    this.currentSlide = index === this.slides.length ? 0 : index;
+  }
+
 }

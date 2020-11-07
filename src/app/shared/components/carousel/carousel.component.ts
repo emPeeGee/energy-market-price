@@ -46,4 +46,8 @@ export class CarouselComponent implements OnInit {
     this.currentLength = [...Array(length).keys()];
   }
 
+  onTabClick(index: number): void {
+    this.currentSlide = index === this.slides.length ? 0 : index;
+
+  }
 }

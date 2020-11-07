@@ -7,8 +7,10 @@
     <app-controller
       class="carousel__controller"
       [currentItem]="currentSlide"
+      [totalItems]="slides.length"
       (nextClick)="onNextClick()"
-      (previousClick)="onPreviousClick()"></app-controller>
+      (previousClick)="onPreviousClick()"
+      (tabClick)="onTabClick($event)"></app-controller>
   </div>
 
   <div class="carousel__content">

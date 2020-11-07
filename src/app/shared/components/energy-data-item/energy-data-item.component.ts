@@ -6,15 +6,11 @@ import { EnergyData } from '../../../core/models/energy-data.model';
   templateUrl: './energy-data-item.component.html',
   styleUrls: ['./energy-data-item.component.scss']
 })
-export class EnergyDataItemComponent implements OnInit {
+export class EnergyDataItemComponent {
 
   @Input() data: EnergyData;
 
   constructor() { }
-
-  ngOnInit(): void {
-    console.log(this.data);
-  }
 
   getPercentage(percentage: number): string {
     if (percentage > 0) {

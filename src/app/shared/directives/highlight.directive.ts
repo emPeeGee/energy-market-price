@@ -1,5 +1,5 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
-import {animate, AnimationBuilder, AnimationMetadata, style} from '@angular/animations';
+import { animate, AnimationBuilder, AnimationMetadata, style } from '@angular/animations';
 
 @Directive({
   selector: '[appHighlight]',
@@ -13,25 +13,19 @@ export class HighlightDirective {
 
   @HostListener('mouseenter') onMouseEnter(): void {
     const metadata = this.color();
-
-    const factory = this.builder.build(metadata);
-    const player = factory.create(this.el.nativeElement);
-
-    player.play();
+    this.highlight(metadata);
   }
 
   @HostListener('mouseout') onMouseLeave(): void {
-    const metadata = this.decolor();
+    const metadata = this.discolor();
+    this.highlight(metadata);
+  }
 
+  private highlight(metadata: AnimationMetadata[]): void {
     const factory = this.builder.build(metadata);
     const player = factory.create(this.el.nativeElement);
 
     player.play();
-  }
-
-  @HostListener('click') onCLick(): void {
-    console.log('click');
-    this.el.nativeElement.style.color = this.green;
   }
 
   private color(): AnimationMetadata[] {
@@ -41,7 +35,7 @@ export class HighlightDirective {
     ];
   }
 
-  private decolor(): AnimationMetadata[] {
+  private discolor(): AnimationMetadata[] {
     return [
       style({ color: this.green }),
       animate('400ms ease-in', style({ color: this.white })),
