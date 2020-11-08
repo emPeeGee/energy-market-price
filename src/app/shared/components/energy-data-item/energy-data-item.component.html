@@ -11,7 +11,10 @@
   </p>
   <p class="box__info" (click)="onSecretReveal()">
     {{ data.info }}
-    <fa-icon class="box__info-icon" [icon]="faAngleDown"></fa-icon>
+    <fa-icon
+      class="box__info-icon"
+      [icon]="faAngleDown"
+      [@faChangeAnimation]="isSecretRevealed ? 'up' : 'down'"></fa-icon>
   </p>
 
   <div class="box__secret" *ngIf="isSecretRevealed" @secretRevealedAnimation>

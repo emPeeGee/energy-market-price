@@ -78,6 +78,11 @@
     width: 20%;
     text-align: right;
     cursor: pointer;
+
+    &:hover {
+      color: $blue_color;
+      transition: 300ms ease-in;
+    }
   }
 }
 

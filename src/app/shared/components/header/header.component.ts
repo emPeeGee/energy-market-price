@@ -45,19 +45,19 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit(): void {
     setTimeout(() => {
-      this.isMobile = document.body.offsetWidth <= 768;
+      this.isMobile = document.body.offsetWidth <= 752;
       if (this.isMobile) {
         this.isMenuVisible = false;
-        this.menuIsVisible.emit(this.isMenuVisible);
       } else {
         this.isMenuVisible = true;
-        this.menuIsVisible.emit(this.isMenuVisible);
       }
+
+      this.menuIsVisible.emit(this.isMenuVisible);
     }, 0);
 
     this.subscriptionResize = fromEvent(window, 'resize')
       .subscribe(() => {
-        this.isMobile = document.body.offsetWidth <= 768;
+        this.isMobile = document.body.offsetWidth <= 752;
         this.menuIsVisible.emit(this.isMenuVisible);
 
         if (!this.isMobile && !this.isMenuVisible) { // If menu is hidden, but is not mobile, when make menu visible

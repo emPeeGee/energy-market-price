@@ -1,8 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { Component, Input } from '@angular/core';
+import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
 import { EnergyData } from '../../../core/models/energy-data.model';
-import {animate, style, transition, trigger} from '@angular/animations';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-energy-data-item',
@@ -19,10 +19,27 @@ import {animate, style, transition, trigger} from '@angular/animations';
         style({ opacity: 1 }),
         animate('200ms ease-in', style({ opacity: 0 })),
       ])
-    ])
+    ]),
+
+    trigger('faChangeAnimation', [
+      state('up', style({
+        transform: 'rotate(180deg)',
+      })),
+      state('down', style({
+        transform: 'rotate(0deg)',
+      })),
+      transition('up => down', [
+        animate('500ms ease', style({ transform: 'rotate(0deg)' })),
+      ]),
+      transition('down => up', [
+        animate('500ms ease', style({ transform: 'rotate(180deg)' })),
+      ]),
+    ]),
   ]})
 export class EnergyDataItemComponent {
   faAngleDown = faAngleDown;
+  faAngleUp = faAngleUp;
+
   isSecretRevealed = false;
 
   @Input() data: EnergyData;
