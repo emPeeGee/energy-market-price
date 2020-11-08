@@ -19,6 +19,7 @@
               (click)="setItem(i)">
               <fa-icon *ngIf="selectedIndex === i" [icon]="faMap"></fa-icon>
               {{ item }}
+              <div [class.active-border]="selectedIndex === i"></div>
             </li>
           </ul>
         </div>

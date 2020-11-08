@@ -41,6 +41,7 @@
   }
 
   &__items {
+    position: relative;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -74,9 +75,22 @@ fa-icon {
 
 .active {
   color: $green_color;
-  border-bottom: 3px solid $green_color;
 }
 
+.active-border {
+  position: relative;
+  bottom: -1px;
+  width: auto;
+  height: 4px;
+  background-color: $green_color;
+  z-index: 100;
+  transition: 200ms ease-in;
+  border-radius: 1px;
+}
+
+.transition {
+  transition: 2000ms ease-in;
+}
 
 @media screen and (max-width: $laptop){
   .header {
@@ -109,6 +123,10 @@ fa-icon {
 
     &__menu-wrapper {
       width: 100%;
+    }
+
+    .active-border {
+      bottom: 2px;
     }
 
   }
@@ -147,5 +165,10 @@ fa-icon {
       width: 100%;
       text-align: center;
     }
+  }
+
+  .active-border {
+    width: 30%;
+    left: 35%;
   }
 }
