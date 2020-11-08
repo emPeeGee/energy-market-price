@@ -1,4 +1,7 @@
-<section class="energy-data">
+<section class="energy-data"
+         appAppear
+         (appear)="onAppear()"
+         [@appearAnimation]="status">
   <div class="container">
 
     <h1 class="energy-data__title">Looking just for Energy Data</h1>

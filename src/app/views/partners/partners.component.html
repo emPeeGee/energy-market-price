@@ -1,4 +1,7 @@
-<section class="partners">
+<section class="partners"
+         appAppear
+         (appear)="onAppear()"
+         [@appearAnimation]="status">
   <div class="container">
     <app-carousel [slides]="slides"></app-carousel>
   </div>

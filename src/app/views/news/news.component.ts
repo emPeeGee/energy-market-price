@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import {News} from '../../core/models/news.model';
+
+import { News } from '../../core/models/news.model';
+import { AnimatedComponent, Animations } from '../../shared/animation/animations';
 
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
-  styleUrls: ['./news.component.scss']
+  styleUrls: ['./news.component.scss'],
+  animations: [ Animations.onAppearAnimation ]
 })
-export class NewsComponent implements OnInit {
+export class NewsComponent extends AnimatedComponent implements OnInit {
   faAngleRight = faAngleRight;
 
   slides: News[] = [
@@ -32,7 +35,9 @@ export class NewsComponent implements OnInit {
 
   ];
 
-  constructor() { }
+  constructor() {
+    super();
+  }
 
   ngOnInit(): void {
   }

@@ -13,6 +13,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { SliderComponent } from './components/slider/slider.component';
 import { ControllerComponent } from './components/controller/controller.component';
 import { PercentagePipe } from './pipes/percentage.pipe';
+import { AppearDirective } from './directives/appear.directive';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { PercentagePipe } from './pipes/percentage.pipe';
     SliderComponent,
     SliderComponent,
     ControllerComponent,
-    PercentagePipe
+    PercentagePipe,
+    AppearDirective,
+    AppearDirective
   ],
   exports: [
     HeaderComponent,
@@ -37,6 +40,7 @@ import { PercentagePipe } from './pipes/percentage.pipe';
     FooterComponent,
     SliderComponent,
     HighlightDirective,
+    AppearDirective,
   ],
   imports: [
     CommonModule,

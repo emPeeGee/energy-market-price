@@ -1,16 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { faGasPump, faCoins, faLeaf, faBolt, faFire, faIndustry } from '@fortawesome/free-solid-svg-icons';
 import { EnergyData } from '../../core/models/energy-data.model';
+import {AnimatedComponent, Animations} from '../../shared/animation/animations';
 
 @Component({
   selector: 'app-energy-data',
   templateUrl: './energy-data.component.html',
-  styleUrls: ['./energy-data.component.scss']
+  styleUrls: ['./energy-data.component.scss'],
+  animations: [ Animations.onAppearAnimation ]
 })
-export class EnergyDataComponent implements OnInit {
+export class EnergyDataComponent extends AnimatedComponent implements OnInit {
   energyData: EnergyData[];
 
-  constructor() { }
+  constructor() {
+    super();
+  }
 
   ngOnInit(): void {
     this.energyData = [
@@ -22,5 +26,4 @@ export class EnergyDataComponent implements OnInit {
       { title: 'Green', icon: faLeaf, percentage: 1.43, price: '4.95 EUR/tonne', info: 'CO2 EUA Dec20' },
     ];
   }
-
 }

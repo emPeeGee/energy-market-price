@@ -1,4 +1,7 @@
-<section class="news">
+<section class="news"
+         appAppear
+         (appear)="onAppear()"
+         [@appearAnimation]="status">
   <div class="container">
 
     <h1 class="news__title">Energy Market News</h1>
