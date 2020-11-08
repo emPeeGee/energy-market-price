@@ -40,5 +40,6 @@
   &__tab--active {
     height: 4.5px;
     background-color: $green_color;
+    transition: 200ms ease-in;
   }
 }
