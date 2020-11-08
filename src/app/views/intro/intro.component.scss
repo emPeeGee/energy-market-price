@@ -70,15 +70,15 @@ fa-icon {
 
 @media screen and (max-width: $tablet){
   .intro {
-    height: 750px;
+    height: 500px;
 
     &__video-background {
       width: 100%;
-      height: 1200px;
+      height: 1000px;
     }
 
     &__video-background--mobile {
-      height: 900px;
+      height: 651px;
     }
   }
 }

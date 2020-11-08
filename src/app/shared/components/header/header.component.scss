@@ -161,8 +161,8 @@ fa-icon {
     &__menu {
       width: 100%;
       height: 100%;
-      display: block;
-
+      display: flex;
+      flex-wrap: wrap;
       border: none;
     }
 
@@ -180,6 +180,7 @@ fa-icon {
     &__login {
       width: 100%;
       text-align: center;
+      order: -1;
     }
   }
 

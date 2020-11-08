@@ -7,9 +7,11 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
   animations: [
     trigger('tabChangeAnimation', [
       state('hidden', style({
-         transform: 'scale(0.05, 0.05)',
+        opacity: 0,
+        transform: 'scale(0.05, 0.05)',
       })),
       state('active', style({
+        opacity: 1,
         transform: 'scale(1, 1)',
       })),
       transition('hidden => active', [

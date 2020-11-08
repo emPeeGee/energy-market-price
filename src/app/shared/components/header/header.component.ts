@@ -46,6 +46,13 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.isMobile = document.body.offsetWidth <= 768;
+      if (this.isMobile) {
+        this.isMenuVisible = false;
+        this.menuIsVisible.emit(this.isMenuVisible);
+      } else {
+        this.isMenuVisible = true;
+        this.menuIsVisible.emit(this.isMenuVisible);
+      }
     }, 0);
 
     this.subscriptionResize = fromEvent(window, 'resize')

@@ -18,9 +18,13 @@
     }
   }
 
+  &__title,
+  &__contacts {
+    font-size: 14px;
+  }
+
   &__title {
     text-align: center;
-    font-size: 14px;
     font-weight: 700;
     cursor: pointer;
   }
@@ -38,7 +42,6 @@
     align-items: center;
 
     &-title {
-      font-size: 14px;
       font-weight: 700;
       cursor: pointer;
     }
@@ -63,8 +66,13 @@ fa-icon {
   .footer {
     height: 180px;
 
-    &__title {
-      font-size: 18px;
+    &__title,
+    &__contacts {
+      font-size: 16px;
+    }
+
+    &__logo {
+      order: -1;
     }
 
     &__content {
