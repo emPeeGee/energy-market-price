@@ -4,45 +4,12 @@
     <h1 class="solution__title">Bespoke solution</h1>
 
     <app-tab-manager>
-      <app-tab title="INDUSTRIAL & COMMERCIAL">
+      <app-tab *ngFor="let solution of solutions" [title]="solution.title">
         <div class="solution__tab-content">
           <div class="solution__tab-row">
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image1.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image2.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image3.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image1.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image3.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image1.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image4.jpg" alt="Blue Image"></div>
-          </div>
-        </div>
-      </app-tab>
-
-      <app-tab title="ENERGY CONSULTANTS">
-        <div class="solution__tab-content">
-          <div class="solution__tab-row">
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image4.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image3.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image2.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image1.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image2.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image1.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image4.jpg" alt="Blue Image"></div>
-          </div>
-        </div>
-      </app-tab>
-
-
-      <app-tab title="ENERGY SUPPLIERS">
-        <div class="solution__tab-content">
-          <div class="solution__tab-row">
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image1.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image3.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image2.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image3.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image4.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image1.jpg" alt="Blue Image"></div>
-            <div class="solution__cell"><img class="solution__tab-image" src="../../../assets/images/backgrounds/blue_image2.jpg" alt="Blue Image"></div>
+            <div class="solution__cell" *ngFor="let image of solution.images">
+              <img class="solution__tab-image" [src]="image" alt="Blue Image">
+            </div>
           </div>
         </div>
       </app-tab>
