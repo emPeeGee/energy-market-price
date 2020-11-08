@@ -34,6 +34,18 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    &-mobile {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-icon {
+      cursor: pointer;
+      font-size: 30px;
+      text-align: center;
+    }
   }
 
   &__menu-wrapper {
@@ -135,7 +147,11 @@ fa-icon {
 
 @media screen and (max-width: $tablet){
   .header {
-    height: 450px;
+    height: 500px;
+
+    &--mobile {
+      height: 150px;
+    }
 
     &__wrapper {
       display: block;
@@ -144,7 +160,7 @@ fa-icon {
 
     &__menu {
       width: 100%;
-      height: 450px;
+      height: 100%;
       display: block;
 
       border: none;

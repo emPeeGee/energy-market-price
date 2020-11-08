@@ -1,8 +1,8 @@
-<app-header [items]="menuItems"></app-header>
+<app-header [items]="menuItems" (menuIsVisible)="onMenuIsVisible($event)"></app-header>
 <section class="intro">
   <div class="container">
 
-    <div class="intro__video-background">
+    <div class="intro__video-background" [class.intro__video-background--mobile]="!isMenuVisible">
       <div class="intro__video-foreground">
         <video autoplay muted loop>
           <source src="assets/videos/Earth_Sun_over_top.mp4" type="video/mp4">
