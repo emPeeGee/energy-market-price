@@ -2,13 +2,6 @@
 
   <button
     class="tab-manager__button"
-
-    appHighlight
-    [highlightColor]="COLORS.WHITE"
-    [initialColor]="COLORS.BLUE"
-    [backgroundColor]="COLORS.BLUE"
-    [initialBackgroundColor]="COLORS.WHITE"
-
     *ngFor="let tab of tabs"
     [class.tab-manager__button-active]="tab.active"
     (click)="selectTab(tab)">

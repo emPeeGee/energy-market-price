@@ -8,8 +8,6 @@ export class HighlightDirective {
 
   @Input() initialColor: string;
   @Input() highlightColor: string;
-  @Input() backgroundColor: string;
-  @Input() initialBackgroundColor: string;
 
   constructor(private builder: AnimationBuilder, private el: ElementRef) {}
 
@@ -31,37 +29,16 @@ export class HighlightDirective {
   }
 
   private color(): AnimationMetadata[] {
-    if (this.backgroundColor && this.initialBackgroundColor) {
-      return [
-        style({ color: this.initialColor, backgroundColor: this.initialBackgroundColor }),
-        animate('300ms ease-in', style({
-          color: this.highlightColor,
-          backgroundColor: this.backgroundColor
-        })),
-      ];
-    } else {
-      return [
-        style({ color: this.initialColor }),
-        animate('300ms ease-in', style({color: this.highlightColor})),
-      ];
-    }
+    return [
+      style({ color: this.initialColor }),
+      animate('300ms ease-in', style({color: this.highlightColor})),
+    ];
   }
 
   private discolor(): AnimationMetadata[] {
-
-    if (this.backgroundColor && this.initialBackgroundColor) {
-      return [
-        style({ color: this.highlightColor, backgroundColor: this.backgroundColor }),
-        animate('400ms ease-in', style({
-          color: this.initialColor,
-          backgroundColor: this.initialBackgroundColor
-        })),
-      ];
-    } else {
-      return [
-        style({ color: this.highlightColor }),
-        animate('400ms ease-in', style({ color: this.initialColor })),
-      ];
-    }
+    return [
+      style({ color: this.highlightColor }),
+      animate('400ms ease-in', style({ color: this.initialColor })),
+    ];
   }
 }

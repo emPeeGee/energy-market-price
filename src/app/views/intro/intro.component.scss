@@ -52,6 +52,10 @@
   height: auto;
 }
 
+fa-icon {
+  margin-right: 8px;
+}
+
 @media screen and (max-width: $laptop){
   .intro {
     height: 700px;
