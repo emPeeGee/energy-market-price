@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 
 import { Animations, AnimatedComponent } from '../../shared/animation/animations';
-import {Solution} from '../../core/models/solution.model';
+import { Solution } from '../../core/models/solution.model';
 
 @Component({
   selector: 'app-solution',
@@ -11,7 +11,7 @@ import {Solution} from '../../core/models/solution.model';
     Animations.onAppearAnimation
   ]
 })
-export class SolutionComponent extends AnimatedComponent implements OnInit {
+export class SolutionComponent extends AnimatedComponent {
 
   solutions: Solution[] = [
     {
@@ -54,8 +54,5 @@ export class SolutionComponent extends AnimatedComponent implements OnInit {
 
   constructor() {
     super();
-  }
-
-  ngOnInit(): void {
   }
 }

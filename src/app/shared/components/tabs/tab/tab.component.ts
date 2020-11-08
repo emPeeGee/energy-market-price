@@ -19,6 +19,6 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
   ]
 })
 export class TabComponent {
-  @Input('title') title: string;
+  @Input() title: string;
   @Input() active = false;
 }

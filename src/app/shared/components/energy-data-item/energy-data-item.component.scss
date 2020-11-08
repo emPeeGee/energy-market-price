@@ -17,6 +17,11 @@
     margin: 0 0 0 16px;
     height: fit-content;
     font-family: 'Montserrat', sans-serif;
+
+    &-icon {
+      font-size: 30px;
+      color: $blue_color;
+    }
   }
 
   &__price {
@@ -24,6 +29,22 @@
   }
 
   &__info {
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+
+    &-icon {
+      font-size: 15px;
+      font-weight: 700;
+      color: $dark_gray_color;
+      margin-left: 8px;
+    }
+  }
+
+  &__secret {
     font-size: 12px;
     font-weight: bold;
   }
@@ -37,10 +58,6 @@
   }
 }
 
-fa-icon {
-  font-size: 30px;
-  color: $blue_color;
-}
 
 @media screen and (max-width: $laptop){
 

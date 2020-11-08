@@ -8,15 +8,6 @@ import { COLORS } from '../../../constants/colors.constants';
   selector: 'app-tab-manager',
   templateUrl: './tab-manager.component.html',
   styleUrls: ['./tab-manager.component.scss'],
-  animations: [
-    trigger('aaaa', [
-      transition(':enter', [
-        style({ opacity: '0' }),
-        animate('1000ms cubic-bezier(0.4, 0.0, 0.2, 1)'),
-        style({ opacity: '1' })
-      ])
-    ])
-  ]
 })
 export class TabManagerComponent implements AfterContentInit {
 
@@ -24,11 +15,14 @@ export class TabManagerComponent implements AfterContentInit {
   COLORS = COLORS;
 
   ngAfterContentInit(): void {
-    const activeTabs = this.tabs.filter((tab) => tab.active);
 
-    if (activeTabs.length === 0) {
-      this.selectTab(this.tabs.first);
-    }
+    setTimeout(() => {
+      const activeTabs = this.tabs.filter((tab) => tab.active);
+
+      if (activeTabs.length === 0) {
+        this.selectTab(this.tabs.toArray()[1]);
+      }
+    }, 0);
   }
 
   selectTab(tab: TabComponent): void {
