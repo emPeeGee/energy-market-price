@@ -1,6 +1,8 @@
-import {AfterContentInit, Component, ContentChildren, OnInit, QueryList} from '@angular/core';
-import { TabComponent } from '../tab/tab.component';
+import { AfterContentInit, Component, ContentChildren, QueryList } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
+
+import { TabComponent } from '../tab/tab.component';
+import { COLORS } from '../../../constants/colors.constants';
 
 @Component({
   selector: 'app-tab-manager',
@@ -19,6 +21,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
 export class TabManagerComponent implements AfterContentInit {
 
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
+  COLORS = COLORS;
 
   ngAfterContentInit(): void {
     const activeTabs = this.tabs.filter((tab) => tab.active);

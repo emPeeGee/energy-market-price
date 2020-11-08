@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 import { animate, AnimationBuilder, AnimationMetadata, style } from '@angular/animations';
 
 @Directive({
@@ -6,8 +6,10 @@ import { animate, AnimationBuilder, AnimationMetadata, style } from '@angular/an
 })
 export class HighlightDirective {
 
-  green = '#83a600';
-  white = '#ffffff';
+  @Input() initialColor: string;
+  @Input() highlightColor: string;
+  @Input() backgroundColor: string;
+  @Input() initialBackgroundColor: string;
 
   constructor(private builder: AnimationBuilder, private el: ElementRef) {}
 
@@ -29,16 +31,37 @@ export class HighlightDirective {
   }
 
   private color(): AnimationMetadata[] {
-    return [
-      style({ color: this.white }),
-      animate('300ms ease-in', style({  color: this.green })),
-    ];
+    if (this.backgroundColor && this.initialBackgroundColor) {
+      return [
+        style({ color: this.initialColor, backgroundColor: this.initialBackgroundColor }),
+        animate('300ms ease-in', style({
+          color: this.highlightColor,
+          backgroundColor: this.backgroundColor
+        })),
+      ];
+    } else {
+      return [
+        style({ color: this.initialColor }),
+        animate('300ms ease-in', style({color: this.highlightColor})),
+      ];
+    }
   }
 
   private discolor(): AnimationMetadata[] {
-    return [
-      style({ color: this.green }),
-      animate('400ms ease-in', style({ color: this.white })),
-    ];
+
+    if (this.backgroundColor && this.initialBackgroundColor) {
+      return [
+        style({ color: this.highlightColor, backgroundColor: this.backgroundColor }),
+        animate('400ms ease-in', style({
+          color: this.initialColor,
+          backgroundColor: this.initialBackgroundColor
+        })),
+      ];
+    } else {
+      return [
+        style({ color: this.highlightColor }),
+        animate('400ms ease-in', style({ color: this.initialColor })),
+      ];
+    }
   }
 }

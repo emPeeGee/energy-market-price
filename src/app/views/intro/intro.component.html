@@ -14,7 +14,10 @@
     <div class="intro__content">
       <h1>Digitizing the Energy Market Landscape</h1>
       <h5>Customized software solutions for the energy industry</h5>
-      <button appHighlight class="intro__content-button">
+      <button class="intro__content-button"
+              appHighlight
+              [initialColor]="COLORS.WHITE"
+              [highlightColor]="COLORS.GREEN">
         <fa-icon [icon]="faAngleRight"></fa-icon>
         TRY A CUSTOM
       </button>
