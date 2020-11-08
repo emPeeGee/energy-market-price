@@ -17,7 +17,7 @@
               [class.active]="selectedIndex === i"
               *ngFor="let item of items; let i = index;"
               (click)="setItem(i)">
-              <fa-icon *ngIf="selectedIndex === i" [icon]="faMap"></fa-icon>
+              <fa-icon *ngIf="selectedIndex === i" [icon]="faMap" @faAppear></fa-icon>
               {{ item }}
               <div [class.active-border]="selectedIndex === i"></div>
             </li>
