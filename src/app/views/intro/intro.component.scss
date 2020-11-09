@@ -3,7 +3,7 @@
 
 .intro {
   width: 100%;
-  height: 92vh;
+  height: 100vh;
   color: $white_color;
 
 
@@ -54,31 +54,4 @@
 
 fa-icon {
   margin-right: 8px;
-}
-
-@media screen and (max-width: $laptop){
-  .intro {
-    height: 700px;
-
-    &__video-background {
-      width: 100%;
-      height: 800px;
-    }
-  }
-}
-
-
-@media screen and (max-width: $tablet){
-  .intro {
-    height: 100vh;
-
-    &__video-background {
-      width: 100%;
-      height: 100vh;
-    }
-
-    &__video-background--mobile {
-      height: 100vh;
-    }
-  }
 }

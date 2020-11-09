@@ -64,7 +64,9 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
         this.checkScrolled();
       });
 
-    this.checkScrolled();
+    setTimeout(() => {
+      this.checkScrolled();
+    }, 0);
   }
 
   ngOnDestroy(): void {
