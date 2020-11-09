@@ -1,4 +1,6 @@
-<header class="header" [class.header--mobile]="!isMenuVisible">
+<header class="header"
+        [class.header--no-background]="!isScrolledMoreThan && !isMobile"
+        [class.header--mobile]="!isMenuVisible">
   <div class="container">
 
     <div class="header__wrapper">
@@ -13,31 +15,34 @@
           <div class="header__menu-mobile">
             <fa-icon
               class="header__menu-icon"
-              [icon]="faBars"
+              [icon]="isMenuVisible ? faTimes : faBars"
               *ngIf="isMobile"
               (click)="toggleMenu()"></fa-icon>
           </div>
 
-          <ul class="header__items" *ngIf="isMenuVisible" @menuAnimation>
-            <li
-              class="header__item"
-              [class.active]="selectedIndex === i"
-              *ngFor="let item of items; let i = index;"
-              (click)="setItem(i)">
-              <fa-icon *ngIf="selectedIndex === i" [icon]="faMap" @faAppearAnimation></fa-icon>
-              {{ item }}
-              <div [class.active-border]="selectedIndex === i"></div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="header__login">
-          <div class="header__login-wrapper">
-            <fa-icon [icon]="faUser"></fa-icon>
-            MEMBER LOGIN
+          <div [class.header__items-wrapper]="isMenuVisible"
+               *ngIf="isMenuVisible"
+               @menuAnimation>
+            <ul class="header__items">
+              <li
+                class="header__item"
+                [class.active]="selectedIndex === i"
+                *ngFor="let item of items; let i = index;"
+                (click)="setItem(i)">
+                <fa-icon *ngIf="selectedIndex === i" [icon]="faMap" @faAppearAnimation></fa-icon>
+                {{ item }}
+                <div [class.active-border]="selectedIndex === i"></div>
+              </li>
+            </ul>
           </div>
         </div>
+      </div>
 
+      <div class="header__login">
+        <div class="header__login-wrapper">
+          <fa-icon [icon]="faUser"></fa-icon>
+          <span *ngIf="!isMobile">MEMBER LOGIN</span>
+        </div>
       </div>
     </div>
 
