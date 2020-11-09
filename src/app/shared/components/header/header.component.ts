@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, EventEmitter, Input, OnDestroy, Output } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { faUser, faMap, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { fromEvent, Subscription } from 'rxjs';
@@ -28,6 +28,8 @@ import { fromEvent, Subscription } from 'rxjs';
   ]
 })
 export class HeaderComponent implements AfterViewInit, OnDestroy {
+  menuItems = ['HOME', 'SOLUTIONS', 'TUTORIAL', 'ABOUT US', 'LIBRARY', 'NEWS', 'CONTACT US'];
+
   faUser = faUser;
   faMap = faMap;
   faBars = faBars;
@@ -42,32 +44,23 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
   subscriptionResize: Subscription;
   subscriptionScroll: Subscription;
 
-  @Input() items: string[];
-  @Output() menuIsVisible = new EventEmitter<boolean>();
-
   constructor() { }
 
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.isMobile = document.body.offsetWidth <= 752;
       this.isMenuVisible = !this.isMobile; // Mobile must init with hidden menu
-
-      this.menuIsVisible.emit(this.isMenuVisible);
     }, 0);
 
     this.subscriptionResize = fromEvent(window, 'resize')
       .subscribe(() => {
         this.isMobile = document.body.offsetWidth <= 752;
-        this.menuIsVisible.emit(this.isMenuVisible);
 
-        if (!this.isMobile && !this.isMenuVisible) { // If menu is hidden, but is not mobile, when make menu visible
-          this.isMenuVisible = true;
-          this.menuIsVisible.emit(this.isMenuVisible);
-        }
+        this.isMenuVisible = !this.isMobile; // Mobile must init with hidden menu
       });
 
     this.subscriptionScroll = fromEvent(window, 'scroll')
-      .subscribe((res) => {
+      .subscribe(() => {
         this.checkScrolled();
       });
 
@@ -87,16 +80,10 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
 
   toggleMenu(): void {
     this.isMenuVisible = !this.isMenuVisible;
-    this.menuIsVisible.emit(this.isMenuVisible);
   }
 
   checkScrolled(): void {
     this.scrollToNextSection = document.querySelector('#solution').getBoundingClientRect().top;
-
-    if (window.pageYOffset > this.scrollToNextSection) {
-      this.isScrolledMoreThan = true;
-    } else {
-      this.isScrolledMoreThan = false;
-    }
+    this.isScrolledMoreThan = window.pageYOffset > this.scrollToNextSection;
   }
 }

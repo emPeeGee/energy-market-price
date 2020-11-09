@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+
 import { News } from '../../../core/models/news.model';
 
 

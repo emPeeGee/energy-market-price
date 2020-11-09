@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AnimatedComponent, Animations } from '../../shared/animation/animations';
 
 @Component({
@@ -7,7 +7,7 @@ import { AnimatedComponent, Animations } from '../../shared/animation/animations
   styleUrls: ['./partners.component.scss'],
   animations: [ Animations.onAppearAnimation ]
 })
-export class PartnersComponent extends AnimatedComponent implements OnInit {
+export class PartnersComponent extends AnimatedComponent {
 
   slides = [
     {
@@ -54,9 +54,6 @@ export class PartnersComponent extends AnimatedComponent implements OnInit {
 
   constructor() {
     super();
-  }
-
-  ngOnInit(): void {
   }
 
 }

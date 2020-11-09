@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 import { COLORS } from '../../constants/colors.constants';
@@ -8,14 +8,11 @@ import { COLORS } from '../../constants/colors.constants';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
   COLORS = COLORS;
 
   faAngleRight = faAngleRight;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

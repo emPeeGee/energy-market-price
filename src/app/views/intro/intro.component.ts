@@ -12,14 +12,5 @@ export class IntroComponent {
   COLORS = COLORS;
   faAngleRight = faAngleRight;
 
-  isMenuVisible = false;
-
-  menuItems = ['HOME', 'SOLUTIONS', 'TUTORIAL', 'ABOUT US', 'LIBRARY', 'NEWS', 'CONTACT US'];
-
   constructor() { }
-
-  onMenuIsVisible(isVisible: boolean): void {
-    this.isMenuVisible = isVisible;
-    console.log(this.isMenuVisible);
-  }
 }

@@ -58,7 +58,7 @@ export class AppearDirective implements AfterViewInit, OnDestroy {
 
   subscribe(): void {
     this.subscriptionScroll = fromEvent(window, 'scroll')
-      .subscribe((res) => {
+      .subscribe(() => {
         this.saveDimensions();
         this.saveScrollPos();
         this.checkVisibility();

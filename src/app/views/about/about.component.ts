@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
+
 import { AnimatedComponent, Animations } from '../../shared/animation/animations';
 
 @Component({

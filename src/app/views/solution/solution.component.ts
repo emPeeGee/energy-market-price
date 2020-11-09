@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import { Component } from '@angular/core';
 
 import { Animations, AnimatedComponent } from '../../shared/animation/animations';
 import { Solution } from '../../core/models/solution.model';

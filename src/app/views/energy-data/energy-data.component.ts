@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faGasPump, faCoins, faLeaf, faBolt, faFire, faIndustry } from '@fortawesome/free-solid-svg-icons';
+
+import { AnimatedComponent, Animations } from '../../shared/animation/animations';
 import { EnergyData } from '../../core/models/energy-data.model';
-import {AnimatedComponent, Animations} from '../../shared/animation/animations';
 
 @Component({
   selector: 'app-energy-data',

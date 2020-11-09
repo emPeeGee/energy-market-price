@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 import { News } from '../../core/models/news.model';
@@ -10,7 +10,7 @@ import { AnimatedComponent, Animations } from '../../shared/animation/animations
   styleUrls: ['./news.component.scss'],
   animations: [ Animations.onAppearAnimation ]
 })
-export class NewsComponent extends AnimatedComponent implements OnInit {
+export class NewsComponent extends AnimatedComponent {
   faAngleRight = faAngleRight;
 
   slides: News[] = [
@@ -38,8 +38,4 @@ export class NewsComponent extends AnimatedComponent implements OnInit {
   constructor() {
     super();
   }
-
-  ngOnInit(): void {
-  }
-
 }

@@ -48,6 +48,6 @@ export class CarouselComponent implements OnInit {
 
   onTabClick(index: number): void {
     this.currentSlide = index === this.slides.length ? 0 : index;
-
   }
 }
+
