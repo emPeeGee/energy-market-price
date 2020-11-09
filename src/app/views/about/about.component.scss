@@ -29,6 +29,10 @@
   &__information {
     width: 25%;
     font-size: 16px;
+
+    &-icon:hover {
+      animation: iconTransform 2s;
+    }
   }
 
   &__presentation-click {
@@ -44,6 +48,10 @@ fa-icon {
   cursor: pointer;
 }
 
+@keyframes iconTransform {
+  0%   { transform: rotate(0deg)  }
+  100%  { transform: rotate(360deg) }
+}
 
 @media screen and (max-width: $tablet){
 
